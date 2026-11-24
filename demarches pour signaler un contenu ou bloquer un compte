@@ -1,1 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conseils pour se protéger des cyberviolences faites aux femmes : sécuriser ses comptes, conserver des preuves, signaler des faits et aider une victime.">
+    <title>Protéger ses comptes : mots de passe et double authentification</title>
+    <h1>Protéger ses comptes : mots de passe et double authentification</h1></head>
+</head>
+<style>
+p {
+margin-bottom: 15px;
+text-align: justify;
+ margin-left: 40px;
+ margin-right: 40px; 
+}
+h1 {
+  color: navy;
+  text-align: center;
+  font-family: Georgia, serif;
+  margin-left: 40px;
+  margin-right: 40px; 
+}
+h2 {
+  color: #3b5ad4;
+  margin-top: 30px;
+  font-family: Georgia, serif; 
+  margin-left: 40px;
+  margin-right: 40px; 
+</style>
+<body>
+    <header>
+        <p><a href="index.html">Femmes et cyberviolences</a></p>
 
+        <nav aria-label="Navigation principale">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="associations.html">Associations</a></li>
+                <li><a href="droits.html" aria-current="page">Comprendre ses droits</a></li>
+                <li><a href="prevention.html">Prévention</a></li>
+                <li><a href="temoignages.html">Témoignages</a></li>
+                <li><a href="chronologie.html">Chronologie</a></li>
+                <li><a href="ressources.html">Ressources</a></li>
+                <li><a href="contacts.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+    <article>
+        <p>Sur les réseaux sociaux et les plateformes numériques, il est possible de signaler un contenu inapproprié ou de bloquer un compte qui pose problème. Ces fonctionnalités permettent de lutter contre le cyberharcèlement, les menaces, les insultes, les contenus haineux, les arnaques et les publications illicites.</p>
+        <p>Il faut distinguer deux actions : <br>- Signaler un contenu ou un compte : avertir la plateforme qu'une publication ou un utilisateur ne respecte pas ses règles. La plateforme peut examiner le signalement et prendre des mesures.<br>- Bloquer un compte : empêcher un utilisateur d'interagir avec soi, selon les fonctionnalités proposées par la plateforme.</p>
+        <h2>1. Comment signaler un contenu ?</h2>
+        <p>La procédure est généralement la suivante :
+            <ol>
+                <li>Ouvrir la publication, la photo, la vidéo ou le commentaire concerné.</li>
+                <li>Cliquer sur les trois petits points (⋯) ou sur le menu des options.</li>
+                <li>Sélectionner “Signaler”.</li>
+                <li>Choisir le motif du signalement : harcèlement, insultes, menaces, violence, discrimination, contenu sexuel inapproprié, arnaque, etc.</li>
+                <li>Suivre les instructions et fournir des précisions si nécessaire.</li>
+                <li>Valider le signalement.</li>
+            </ol>
+        </p>
+        <p>La plateforme examine ensuite le signalement et peut supprimer le contenu, limiter sa diffusion ou sanctionner le compte si ses règles ont été enfreintes. Selon Service-Public.fr, les plateformes doivent proposer un mécanisme électronique facilement accessible pour signaler les contenus illicites.</p>
+        <h2>2. Comment bloquer un compte ?</h2>
+        <p>Pour bloquer un utilisateur, les étapes habituelles sont :
+            <ol>
+                <li>Accéder au profil de la personne concernée.</li>
+                <li>Cliquer sur les trois petits points (⋯).</li>
+                <li>Sélectionner l'option « Bloquer ».</li>
+                <li>Confirmer son choix si une demande de confirmation apparaît.</li>
+            </ol>
+        </p>
+        <p>Une fois le compte bloqué, selon la plateforme :<br>- L'utilisateur ne peut plus vous contacter directement.<br>- Il ne peut plus accéder à certaines informations de votre profil.<br>- Ses interactions avec vous sont limitées.<br>- Vous pouvez généralement débloquer ce compte ultérieurement.<br>Attention : bloquer un compte ne signifie pas que le contenu publié est supprimé. Il est donc conseillé de signaler également les publications problématiques.</p>
+        <h2>3. Que faire si le contenu est illégal en France ?</h2>
+        <p>En France, il existe un dispositif officiel : PHAROS (Plateforme d'harmonisation, d'analyse, de recoupement et d'orientation des signalements).</p>
+        <p>Cette plateforme permet notamment de signaler :<br>- Les menaces et incitations à la violence.<br>- Les contenus terroristes.<br>- Les contenus pédopornographiques.<br>- Les incitations à la haine et les discriminations.<br>- Certains trafics et contenus mettant en danger les personnes.<br>Le signalement se fait en remplissant un formulaire en ligne. Il est traité par des policiers ou des gendarmes.</p>
+        <p>PHAROS concerne principalement les contenus accessibles publiquement. Les injures ou diffamations reçues dans un cadre privé nécessitent une autre démarche. 
+        <p>En cas d'urgence, il faut contacter directement les services de secours ou les forces de l'ordre.</p>
+        <h2>4. Quelques conseils importants</h2>
+        <p>
+            <ul>
+                <li>Conserver des captures d'écran des publications problématiques.</li>
+                <li>Garder les liens vers les profils et les contenus concernés.</li>
+                <li>Ne pas répondre aux provocations.</li>
+                <li>Ne pas partager un contenu illégal, même pour le dénoncer.</li>
+                <li>Signaler les faits à la plateforme et, si nécessaire, aux autorités compétentes.</li>
+            </ul>
+        </p>
+        </article>
+    <footer>
+        <p>Projet universitaire — Femmes et cyberviolences.</p>
+        <p><a href="contacts.html">Nous contacter</a></p>
+        <!-- Mentions légales et licence de réutilisation à compléter. -->
+    </footer>
+</body>
+</html>

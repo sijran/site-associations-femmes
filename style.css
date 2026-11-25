@@ -363,3 +363,21 @@ article li {
         padding: 20px;
     }
 }
+/* Menu intégré dans le header */
+body > header.entete-site nav.navigation-principale {
+    justify-content: center;
+    background-color: transparent;
+    border-bottom: none;
+    margin-top: 25px;
+    flex-wrap: nowrap;
+}
+
+/* Centrage du contenu du header */
+.presentation-site {
+    text-align: center;
+}
+
+/* Centrage des rubriques */
+.menu-deroulant {
+    text-align: center;
+}

@@ -370,3 +370,23 @@ article li {
         padding: 20px;
     }
 }
+/* Centrer les quatre rubriques du menu */
+nav.navigation-principale {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 35px;
+    text-align: center;
+}
+
+/* Centrer le texte des rubriques */
+.menu-deroulant summary {
+    text-align: center;
+}
+
+/* Garder les sous-menus alignés sous leur rubrique */
+.menu-deroulant ul {
+    left: 50%;
+    transform: translateX(-50%);
+}

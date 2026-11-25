@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -15,20 +16,19 @@
 
 <body>
 
-    <!-- EN-TETE DU SITE -->
+    <!-- EN-TÊTE : TITRE ET TEXTE  -->
 
-<!-- EN-TÊTE DU SITE  -->
+    <header class="entete-site">
 
-<header class="entete-site">
+        <div class="presentation-site">
+            <h1>Femmes et cyberviolences</h1>
+            <p>S'informer, se protéger et trouver de l'aide en Île-de-France.</p>
+        </div>
 
-    <!-- Nom et présentation du site -->
-    <div class="logo-site">
-        <h1>CYBERÉGALITÉ</h1>
-        <p>Comprendre · Prévenir · Agir</p>
-    </div>
+    </header>
 
-    <!-- Menu principal de navigation -->
-    <nav class="navigation-principale">
+    <!-- NAVIGATION PRINCIPALE HORIZONTALE -->
+    <nav class="navigation-principale" aria-label="Navigation principale">
 
         <!-- Rubrique 1 : Trouver de l'aide -->
         <details class="menu-deroulant">
@@ -48,9 +48,9 @@
             </ul>
         </details>
 
-        <!-- Rubrique 3 : Se protéger -->
+        <!-- Rubrique 3 : Se protéger et prévenir -->
         <details class="menu-deroulant">
-            <summary>Se protéger</summary>
+            <summary>Se protéger et prévenir</summary>
             <ul>
                 <li><a href="prevention.html">Prévention</a></li>
                 <li><a href="protegersescomptes.html">Protéger ses comptes</a></li>
@@ -66,19 +66,15 @@
                 <li><a href="violenceenligne.html">Violences en ligne</a></li>
             </ul>
         </details>
+
     </nav>
 
-</header>
-
-<!-- FIN DE L'EN-TÊTE ET DÉBUT DU CONTENU -->
-
     <!-- CONTENU PRINCIPAL DE LA PAGE -->
-
     <main>
 
         <article>
 
-            <!-- PRESENTATION DU SITE -->
+            <!-- PRÉSENTATION DU SITE -->
 
             <header>
                 <h2>Comprendre les cyberviolences et agir</h2>
@@ -98,111 +94,32 @@
                 </p>
             </header>
 
-            <!-- RUBRIQUES PRINCIPALES EN ACCORDEON -->
+            <!-- RUBRIQUE : TROUVER DE L'AIDE -->
+            <section id="aide">
 
-            <section id="menu-rubriques">
-
-                <!-- RUBRIQUE 1 : TROUVER DE L'AIDE -->
-
-                <details>
-                    <summary>Trouver de l'aide</summary>
-
-                    <ul>
-                        <li>
-                            <a href="associations.html">
-                                Associations
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="ressources.html">
-                                Ressources
-                            </a>
-                        </li>
-                    </ul>
-                </details>
-
-                <!-- RUBRIQUE 2 : COMPRENDRE SES DROITS -->
-
-                <details>
-                    <summary>Comprendre ses droits</summary>
-
-                    <ul>
-                        <li>
-                            <a href="droits.html">
-                                Comprendre ses droits
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="chronologie.html">
-                                Chronologie
-                            </a>
-                        </li>
-                    </ul>
-                </details>
-
-
-                <!-- RUBRIQUE 3 : SE PROTEGER ET PREVENIR -->
-
-                <details>
-                    <summary>Se protéger et prévenir</summary>
-
-                    <ul>
-                        <li>
-                            <a href="prevention.html">
-                                Prévention
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="protegersescomptes.html">
-                                Protéger ses comptes
-                            </a>
-                        </li>
-                    </ul>
-                </details>
-
-
-                <!-- RUBRIQUE 4 : FAIRE FACE AUX VIOLENCES -->
-
-                <details>
-                    <summary>Faire face aux violences</summary>
-
-                    <ul>
-                        <li>
-                            <a href="victimedeviolence.html">
-                                Victime de violences
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="demarchespoursignaler.html">
-                                Signaler les violences
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="violenceenligne.html">
-                                Violences en ligne
-                            </a>
-                        </li>
-                    </ul>
-                </details>
-
-            </section>
-
-            <!-- INFORMATIONS IMPORTANTES -->
-            
-            <section id="urgence">
-
-                <h3>En cas de danger immédiat</h3>
+                <h3>Trouver de l'aide</h3>
 
                 <p>
-                    Appelez le
-                    <a href="tel:17">17</a>
-                    ou le
-                    <a href="tel:112">112</a>.
+                    Vous êtes confrontée à des violences en ligne
+                    ou vous souhaitez accompagner une personne
+                    concernée ? Retrouvez notre répertoire
+                    d'associations et de structures d'aide
+                    en Île-de-France.
+                </p>
+
+                <p>
+                    <a href="associations.html">
+                        Consulter le répertoire des associations
+                    </a>
+                </p>
+
+                <!-- Informations d'urgence -->
+
+                <h4>En cas de danger immédiat</h4>
+
+                <p>
+                    Appelez le <a href="tel:17">17</a>
+                    ou le <a href="tel:112">112</a>.
                 </p>
 
                 <p>
@@ -221,28 +138,80 @@
 
             </section>
 
-            <!-- TEMOIGNAGES -->
+            <!-- RUBRIQUE : COMPRENDRE LES CYBERVIOLENCES -->
+            <section id="comprendre">
 
-            <section id="temoignages">
-
-                <h3>Découvrir les témoignages</h3>
+                <h3>Comprendre les cyberviolences</h3>
 
                 <p>
-                    Retrouvez des témoignages illustrant
-                    différentes situations de cyberviolences
-                    et leurs conséquences.
+                    Quelles formes peuvent prendre les violences
+                    en ligne ? Que prévoit la loi ?
+                    Quelles démarches sont possibles ?
                 </p>
 
                 <p>
-                    <a href="temoignages.html">
-                        Consulter les témoignages
+                    Découvrez des explications accessibles
+                    pour mieux identifier ces situations
+                    et comprendre les droits des victimes.
+                </p>
+
+                <p>
+                    <a href="droits.html">
+                        Comprendre ses droits
                     </a>
                 </p>
 
             </section>
 
-            <!-- PRESENTATION DU PROJET -->
+            <!-- RUBRIQUE : PRÉVENTION -->
+            <section id="prevention">
 
+                <h3>Se protéger et agir</h3>
+
+                <p>
+                    Sécuriser ses comptes, protéger ses données
+                    personnelles, conserver des preuves
+                    et signaler des contenus :
+                    découvrez les principales démarches
+                    pour mieux vous protéger en ligne.
+                </p>
+
+                <p>
+                    <a href="prevention.html">
+                        Consulter nos conseils de prévention
+                    </a>
+                </p>
+
+            </section>
+
+            <!-- RUBRIQUE : AUTRES RESSOURCES -->
+            <section id="decouvrir">
+
+                <h3>Découvrir les autres ressources</h3>
+
+                <ul>
+                    <li>
+                        <a href="temoignages.html">Témoignages</a> :
+                        découvrir des situations illustrant
+                        les différentes formes de cyberviolences.
+                    </li>
+
+                    <li>
+                        <a href="chronologie.html">Chronologie</a> :
+                        retracer les grandes étapes
+                        de l'évolution des droits des femmes.
+                    </li>
+
+                    <li>
+                        <a href="ressources.html">Ressources</a> :
+                        consulter notre glossaire,
+                        notre bibliographie et notre sitographie.
+                    </li>
+                </ul>
+
+            </section>
+
+            <!-- PRÉSENTATION DU PROJET -->
             <section id="projet">
 
                 <h3>À propos du projet</h3>
@@ -267,33 +236,28 @@
     </main>
 
     <!-- PIED DE PAGE -->
-    <!-- CONTACT ET MENTIONS LEGALES -->
-
     <footer id="pied-de-page">
 
+        <p>© 2026 - Projet universitaire - Femmes et cyberviolences.</p>
+
+        <!-- Mentions légales -->
         <p>
-            © 2026 - Projet universitaire -
-            Femmes et cyberviolences.
+            <a href="mentions-legales.html">Mentions légales</a>
         </p>
 
-        <!-- Lien vers la page de contact -->
+        <!-- Politique de confidentialité -->
+        <p>
+            <a href="confidentialite.html">Politique de confidentialité</a>
+        </p>
+
+        <!-- Contact -->
         <p>
             <a href="contacts.html">Nous contacter</a>
         </p>
 
-        <!-- Lien vers les mentions légales -->
-        <p>
-            <a href="mentions-legales.html">
-                Mentions légales
-            </a>
-        </p>
+        <!-- Mentions légales et licence de réutilisation à compléter -->
 
-        <!-- Lien vers la politique de confidentialité -->
-        <p>
-            <a href="confidentialite.html">
-                Politique de confidentialité
-            </a>
-        </p>
     </footer>
+
 </body>
 </html>

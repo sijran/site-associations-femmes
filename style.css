@@ -1,4 +1,4 @@
-/* COULEURS DU SITE */
+/* 1. COULEURS DU SITE */
 
 :root {
     --violet: #2D00AD;
@@ -12,7 +12,7 @@
     --texte: #51475A;
 }
 
-/* MISE EN PAGE GENERALE */
+/* 2. MISE EN PAGE GÉNÉRALE */
 
 * {
     box-sizing: border-box;
@@ -31,7 +31,7 @@ body {
     line-height: 1.8;
 }
 
-/* TITRES */
+/* 3. TITRES */
 
 h1, h2, h3, h4 {
     color: var(--violet-encre);
@@ -40,7 +40,6 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    text-align: center;
     font-size: 50px;
     margin: 0 0 20px;
 }
@@ -60,15 +59,15 @@ h4 {
     font-size: 22px;
 }
 
-/* PARAGRAPHES */
+/* 4. PARAGRAPHES */
 
 p {
     margin-bottom: 18px;
 }
 
-/* EN-TETE DU SITE */
+/* 5. EN-TÊTE DU SITE */
 
-body > header {
+body > header.entete-site {
     background-color: var(--lilas);
     background-image: linear-gradient(
         130deg,
@@ -76,48 +75,135 @@ body > header {
         var(--lilas),
         var(--lilas-moyen)
     );
-    padding: 70px 30px;
+
+    padding: 55px 30px;
     text-align: center;
 }
 
-body > header p {
+/* Titre du site */
+
+.entete-site h1 {
+    color: var(--violet-encre);
+    font-size: 50px;
+    margin: 0 0 15px;
+}
+
+/* Texte sous le titre */
+
+.entete-site p {
     max-width: 670px;
     margin: auto;
     color: var(--texte);
 }
 
-/* MENU PRINCIPAL */
+/* 6. MENU PRINCIPAL HORIZONTAL */
 
-nav {
-    margin: 30px auto 0;
-}
-
-nav ul {
+nav.navigation-principale {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
+    gap: 35px;
+
+    width: 100%;
     margin: 0;
-    padding: 0;
-    list-style: none;
+    padding: 12px 20px;
+
+    background-color: var(--blanc);
+    border-bottom: 1px solid var(--lilas-moyen);
+
+    position: relative;
+    z-index: 100;
 }
 
-nav a {
-    display: inline-block;
-    padding: 10px 16px;
-    border: 1px solid var(--lilas-moyen);
-    border-radius: 25px;
+/* Chaque rubrique */
+
+.menu-deroulant {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+/* Titres des rubriques */
+
+.menu-deroulant summary {
+    list-style: none;
+    cursor: pointer;
+
+    color: var(--violet-encre);
+    font-size: 16px;
+    font-weight: bold;
+
+    padding: 8px 0;
+    white-space: nowrap;
+}
+
+/* Suppression de la flèche par défaut */
+
+.menu-deroulant summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Petite flèche personnalisée */
+
+.menu-deroulant summary::after {
+    content: "⌄";
+    margin-left: 8px;
+}
+
+/* Flèche lorsque le menu est ouvert */
+
+.menu-deroulant[open] summary::after {
+    content: "⌃";
+}
+
+/* Couleur au survol */
+
+.menu-deroulant summary:hover {
+    color: var(--rose-accent);
+}
+
+/* 7. SOUS-MENUS DÉROULANTS */
+
+.menu-deroulant ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    min-width: 230px;
+    margin: 0;
+    padding: 10px 0;
+
+    list-style: none;
     background-color: var(--blanc);
+
+    border: 1px solid var(--lilas-moyen);
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(55, 25, 82, 0.12);
+
+    z-index: 200;
+}
+
+/* Liens des sous-menus */
+
+.menu-deroulant ul li a {
+    display: block;
+    padding: 12px 20px;
+
     color: var(--violet-encre);
     text-decoration: none;
+    font-size: 15px;
 }
 
-nav a:hover {
-    background-color: var(--violet);
-    color: var(--blanc);
+/* Effet au survol des liens */
+
+.menu-deroulant ul li a:hover {
+    background-color: var(--rose-poudre);
+    color: var(--violet);
 }
 
-/* CONTENU PRINCIPAL */
+/* 8. CONTENU PRINCIPAL */
 
 main {
     width: 90%;
@@ -125,106 +211,48 @@ main {
     margin: 70px auto;
 }
 
-/* PRESENTATION DES RUBRIQUES */
+/* Présentation de la page d'accueil */
 
 article > header {
     text-align: center;
     margin-bottom: 50px;
 }
 
+/* 9. SECTIONS DU SITE */
+
 article > section {
     background-color: var(--blanc);
     margin-bottom: 25px;
     padding: 35px;
+
     border: 1px solid var(--lilas-moyen);
     border-left: 5px solid var(--rose-accent);
     border-radius: 20px;
+
     box-shadow: 0 10px 30px rgba(55, 25, 82, 0.07);
 }
+
+/* Alternance des couleurs des sections */
 
 article > section:nth-of-type(even) {
     background-color: var(--rose-poudre);
 }
 
+/* 10. INFORMATIONS IMPORTANTES ET URGENCE */
 
-/* RUBRIQUES EN ACCORDEON */
-
-#menu-rubriques {
-    width: 100%;
-    max-width: 900px;
-    margin: 40px auto;
-}
-
-#menu-rubriques details {
-    background-color: #FFFFFF;
-    border: 1px solid #CDBBDD;
-    border-left: 5px solid #B66B91;
+#urgence {
+    background-color: var(--rose-poudre);
+    border-left: 5px solid var(--rose-accent);
+    padding: 30px;
+    margin-top: 35px;
     border-radius: 15px;
-    margin-bottom: 15px;
-    padding: 18px 25px;
-    box-shadow: 0 5px 15px rgba(55, 25, 82, 0.07);
 }
 
-/* TITRES DES RUBRIQUES */
-
-#menu-rubriques summary {
-    color: #28134A;
-    font-size: 22px;
-    cursor: pointer;
-    padding: 5px;
-    font-weight: bold;
+#urgence h3 {
+    color: var(--rose-accent);
 }
 
-/* CONTENU DES RUBRIQUES */
-
-#menu-rubriques ul {
-    margin-top: 20px;
-    padding-left: 25px;
-}
-
-#menu-rubriques li {
-    margin-bottom: 12px;
-}
-
-#menu-rubriques a {
-    color: #2D00AD;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-#menu-rubriques a:hover {
-    color: #B66B91;
-    text-decoration: underline;
-}
-
-/* RUBRIQUE OUVERTE */
-
-#menu-rubriques details[open] {
-    background-color: #F5E7ED;
-}
-
-#menu-rubriques summary:hover {
-    color: #B66B91;
-}
-
-/* TELEPHONES */
-
-@media (max-width: 700px) {
-
-    #menu-rubriques {
-        width: 95%;
-    }
-
-    #menu-rubriques details {
-        padding: 15px;
-    }
-
-    #menu-rubriques summary {
-        font-size: 18px;
-    }
-}
-
-/* LIENS */
+/* 11. LIENS */
 
 a {
     color: var(--violet);
@@ -235,7 +263,7 @@ a:hover {
     color: var(--rose-accent);
 }
 
-/* LISTES */
+/* 12. LISTES */
 
 article ul {
     padding-left: 25px;
@@ -245,7 +273,7 @@ article li {
     margin-bottom: 10px;
 }
 
-/* RUBRIQUE CONTACT */
+/* 13. RUBRIQUE CONTACT */
 
 #contact {
     background-color: var(--lilas);
@@ -254,7 +282,7 @@ article li {
     margin-top: 35px;
 }
 
-/* PIED DE PAGE ET MENTIONS LEGALES */
+/* 14. PIED DE PAGE */
 
 #pied-de-page {
     background-color: var(--violet-encre);
@@ -271,25 +299,29 @@ article li {
     color: var(--blanc);
 }
 
-/* ADAPTATION AUX TELEPHONES */
+/* 15. ADAPTATION AUX TABLETTES ET TÉLÉPHONES */
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
 
-    body {
-        font-size: 16px;
+    /* En-tête */
+
+    body > header.entete-site {
+        padding: 40px 20px;
     }
 
-    h1 {
-        font-size: 36px;
+    .entete-site h1 {
+        font-size: 38px;
     }
 
-    h2 {
-        font-size: 30px;
+    /* Navigation : autoriser le retour à la ligne */
+
+    nav.navigation-principale {
+        flex-wrap: wrap;
+        gap: 10px 22px;
+        padding: 12px;
     }
 
-    body > header {
-        padding: 45px 20px;
-    }
+    /* Contenu */
 
     main {
         width: 92%;
@@ -300,145 +332,41 @@ article li {
         padding: 25px;
     }
 
-    nav ul {
-        gap: 7px;
-    }
-
-    nav a {
-        padding: 8px 12px;
-        font-size: 14px;
+    .menu-deroulant summary {
+        font-size: 15px;
     }
 }
-/* INFORMATIONS IMPORTANTES ET URGENCE */
 
-#urgence {
-    background-color: var(--rose-poudre);
-    border-left: 5px solid var(--rose-accent);
-    padding: 30px;
-    margin-top: 35px;
-    border-radius: 15px;
-}
+/* 16. ADAPTATION AUX PETITS TÉLÉPHONES */
 
-#urgence h3 {
-    color: var(--rose-accent);
-}
+@media (max-width: 500px) {
 
-/* ====================================== */
-/* EN-TÊTE DU SITE : LOGO ET NAVIGATION */
-/* ====================================== */
-
-.entete-site {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 4%;
-    background-color: var(--ivoire);
-    position: relative;
-    z-index: 100;
-    gap: 25px;
-}
-
-/* Style du nom du site */
-.logo-site h1 {
-    color: var(--violet-encre);
-    margin: 0;
-    font-size: 28px;
-}
-
-/* Style du slogan sous le nom */
-.logo-site p {
-    color: var(--violet);
-    margin: 5px 0 0;
-    font-size: 13px;
-}
-
-/* ====================================== */
-/* MENU PRINCIPAL DE NAVIGATION */
-/* ====================================== */
-
-.navigation-principale {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-/* Positionnement de chaque rubrique */
-.menu-deroulant {
-    position: relative;
-}
-
-/* Apparence du titre des rubriques */
-.menu-deroulant summary {
-    list-style: none;
-    cursor: pointer;
-    color: var(--violet-encre);
-    font-size: 16px;
-    padding: 12px 0;
-}
-
-/* Suppression du marqueur par défaut */
-.menu-deroulant summary::-webkit-details-marker {
-    display: none;
-}
-
-/* Petite flèche à côté du titre */
-.menu-deroulant summary::after {
-    content: "⌄";
-    margin-left: 8px;
-}
-
-/* Changement de flèche lorsque le menu est ouvert */
-.menu-deroulant[open] summary::after {
-    content: "⌃";
-}
-
-/* ====================================== */
-/* SOUS-MENUS DÉROULANTS */
-/* ====================================== */
-
-.menu-deroulant ul {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    min-width: 230px;
-    background-color: var(--blanc);
-    list-style: none;
-    padding: 12px 0;
-    margin: 0;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
-    z-index: 200;
-}
-
-/* Apparence des liens dans les sous-menus */
-.menu-deroulant ul li a {
-    display: block;
-    padding: 15px 22px;
-    color: var(--violet-encre);
-    text-decoration: none;
-}
-
-/* Couleur au survol des liens */
-.menu-deroulant ul li a:hover {
-    background-color: var(--rose-poudre);
-    color: var(--violet);
-}
-
-/* ====================================== */
-/* ADAPTATION AUX TÉLÉPHONES ET TABLETTES */
-/* ====================================== */
-
-@media screen and (max-width: 850px) {
-
-    /* Affichage vertical de l'en-tête */
-    .entete-site {
-        flex-direction: column;
-        align-items: flex-start;
+    body {
+        font-size: 16px;
     }
 
-    /* Les rubriques peuvent passer à la ligne */
-    .navigation-principale {
-        flex-wrap: wrap;
-        gap: 12px 20px;
+    .entete-site h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    nav.navigation-principale {
+        justify-content: flex-start;
+        gap: 8px 18px;
+    }
+
+    .menu-deroulant ul {
+        min-width: 200px;
+    }
+
+    article > section {
+        padding: 20px;
     }
 }

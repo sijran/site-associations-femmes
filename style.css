@@ -385,3 +385,15 @@ body > header.entete-site nav.navigation-principale {
 .menu-deroulant {
     text-align: center;
 }
+/* Footer : pleine largeur sur toutes les pages */
+#pied-de-page {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: var(--violet-encre);
+    color: var(--blanc);
+    padding: 40px 20px;
+    text-align: center;
+}

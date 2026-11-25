@@ -1,3 +1,5 @@
+/* COULEURS DU SITE */
+
 :root {
     --violet: #2D00AD;
     --violet-encre: #28134A;
@@ -8,11 +10,9 @@
     --ivoire: #FFFCFA;
     --blanc: #FFFFFF;
     --texte: #51475A;
-    --texte-doux: #746A7B;
-    --trait: #E9DFEB;
-    --ombre: 0 16px 42px rgba(55, 25, 82, .07);
-    --rayon: 22px;
 }
+
+/* MISE EN PAGE GENERALE */
 
 * {
     box-sizing: border-box;
@@ -20,142 +20,83 @@
 
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 24px;
 }
 
 body {
     margin: 0;
-    background:
-        radial-gradient(ellipse at 5% 18%, rgba(234, 225, 242, .42), transparent 30rem),
-        var(--ivoire);
+    background-color: var(--ivoire);
     color: var(--texte);
-    font-family: 'Alice', Georgia, serif;
+    font-family: Georgia, serif;
     font-size: 17px;
     line-height: 1.8;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* TITRES */
+
+h1, h2, h3, h4 {
     color: var(--violet-encre);
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Times New Roman", serif;
     font-weight: normal;
-    line-height: 1.16;
 }
 
 h1 {
-    max-width: 900px;
-    margin: 0 auto 18px;
-    font-size: clamp(2.8rem, 6vw, 5.4rem);
-    letter-spacing: -2px;
+    text-align: center;
+    font-size: 50px;
+    margin: 0 0 20px;
 }
 
 h2 {
-    margin: 0 0 24px;
-    font-size: clamp(2.2rem, 4.5vw, 3.6rem);
-    letter-spacing: -.8px;
+    font-size: 38px;
+    margin-bottom: 24px;
 }
 
 h3 {
-    margin: 0 0 15px;
     color: var(--violet);
-    font-size: clamp(1.7rem, 3vw, 2.2rem);
+    font-size: 28px;
 }
 
 h4 {
-    margin: 28px 0 10px;
     color: var(--rose-accent);
-    font-size: 1.45rem;
+    font-size: 22px;
 }
+
+/* PARAGRAPHES */
 
 p {
-    margin: 0 0 18px;
+    margin-bottom: 18px;
 }
 
-a {
-    color: var(--violet);
-    text-decoration-color: rgba(45, 0, 173, .35);
-    text-decoration-thickness: 1px;
-    text-underline-offset: 4px;
-    transition: color .2s ease, background-color .2s ease, border-color .2s ease;
-}
+/* EN-TETE DU SITE */
 
-a:hover {
-    color: var(--rose-accent);
-}
-
-a:focus-visible {
-    outline: 3px solid var(--rose-accent);
-    outline-offset: 4px;
-    border-radius: 5px;
-}
-
-/* Grand bandeau d'accueil, doux et Ã©ditorial */
 body > header {
-    position: relative;
-    overflow: hidden;
-    padding: 88px 7vw 62px;
-    background:
-        radial-gradient(circle at 12% 18%, rgba(255,255,255,.82) 0 3px, transparent 4px),
-        radial-gradient(circle at 88% 75%, rgba(255,255,255,.62) 0 5px, transparent 6px),
-        linear-gradient(130deg, #F5EAF0 0%, #EAE1F2 54%, #DDD0EA 100%);
+    background-color: var(--lilas);
+    background-image: linear-gradient(
+        130deg,
+        var(--rose-poudre),
+        var(--lilas),
+        var(--lilas-moyen)
+    );
+    padding: 70px 30px;
     text-align: center;
 }
 
-body > header::before,
-body > header::after {
-    position: absolute;
-    z-index: 0;
-    display: block;
-    width: 230px;
-    height: 230px;
-    border: 1px solid rgba(255,255,255,.55);
-    border-radius: 50%;
-    content: "";
-    pointer-events: none;
-}
-
-body > header::before {
-    top: -145px;
-    left: -75px;
-    box-shadow: 0 0 0 24px rgba(255,255,255,.12), 0 0 0 50px rgba(255,255,255,.08);
-}
-
-body > header::after {
-    right: -110px;
-    bottom: -165px;
-    width: 310px;
-    height: 310px;
-    box-shadow: 0 0 0 24px rgba(255,255,255,.12), 0 0 0 50px rgba(255,255,255,.08);
-}
-
-body > header > h1,
-body > header > p,
-body > header > nav {
-    position: relative;
-    z-index: 1;
-}
-
-body > header > h1 {
-    color: var(--violet-encre);
-}
-
-body > header > p {
+body > header p {
     max-width: 670px;
-    margin: 0 auto;
-    color: #62566F;
-    font-size: clamp(1.05rem, 2vw, 1.25rem);
+    margin: auto;
+    color: var(--texte);
 }
 
-/* Navigation en pastilles */
-body > header nav {
-    max-width: 1120px;
-    margin: 42px auto 0;
+/* MENU PRINCIPAL */
+
+nav {
+    margin: 30px auto 0;
 }
 
 nav ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 9px;
+    gap: 10px;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -163,216 +104,208 @@ nav ul {
 
 nav a {
     display: inline-block;
-    padding: 9px 15px;
-    border: 1px solid rgba(45, 0, 173, .12);
-    border-radius: 999px;
-    background: rgba(255,255,255,.55);
+    padding: 10px 16px;
+    border: 1px solid var(--lilas-moyen);
+    border-radius: 25px;
+    background-color: var(--blanc);
     color: var(--violet-encre);
-    font-family: 'Alice', Georgia, serif;
-    font-size: .93rem;
     text-decoration: none;
 }
 
-nav a:hover,
-nav a[aria-current="page"] {
-    border-color: var(--violet);
-    background: var(--violet);
+nav a:hover {
+    background-color: var(--violet);
     color: var(--blanc);
 }
 
-/* Zone principale */
+/* CONTENU PRINCIPAL */
+
 main {
-    width: min(1080px, calc(100% - 44px));
-    margin: 76px auto 96px;
+    width: 90%;
+    max-width: 1080px;
+    margin: 70px auto;
 }
+
+/* PRESENTATION DES RUBRIQUES */
 
 article > header {
-    position: relative;
-    max-width: 850px;
-    margin: 0 auto 62px;
-    padding: 0 18px 42px;
     text-align: center;
+    margin-bottom: 50px;
 }
 
-article > header::after {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 74px;
-    height: 3px;
-    border-radius: 4px;
-    background: linear-gradient(90deg, var(--lilas-moyen), var(--rose-accent));
-    content: "";
-    transform: translateX(-50%);
-}
-
-article > header h2 {
-    color: var(--violet);
-}
-
-article > header p {
-    max-width: 750px;
-    margin: 0 auto 15px;
-    color: var(--texte-doux);
-    font-size: 1.08rem;
-}
-
-/* Le HTML contient une deuxiÃ¨me navigation dans l'article :
-   on la masque pour ne pas afficher le menu deux fois. */
-article > nav {
-    display: none;
-}
-
-/* Sections : cartes aÃ©rÃ©es avec un accent vertical */
 article > section {
-    position: relative;
-    margin: 0 0 26px;
-    padding: 38px 44px 38px 48px;
-    overflow: hidden;
-    border: 1px solid rgba(205, 187, 221, .48);
-    border-radius: var(--rayon);
-    background: rgba(255,255,255,.92);
-    box-shadow: var(--ombre);
-}
-
-article > section::before {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    width: 5px;
-    background: linear-gradient(180deg, var(--lilas-moyen), var(--rose-accent));
-    content: "";
+    background-color: var(--blanc);
+    margin-bottom: 25px;
+    padding: 35px;
+    border: 1px solid var(--lilas-moyen);
+    border-left: 5px solid var(--rose-accent);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(55, 25, 82, 0.07);
 }
 
 article > section:nth-of-type(even) {
-    background: linear-gradient(115deg, #FBF7FC 0%, #F8EFF3 100%);
+    background-color: var(--rose-poudre);
 }
 
-article > section p:last-child {
-    margin-bottom: 0;
+
+/* RUBRIQUES EN ACCORDEON */
+
+#menu-rubriques {
+    width: 100%;
+    max-width: 900px;
+    margin: 40px auto;
 }
 
-/* Liens d'action */
-article > section a[href$="associations.html"],
-article > section a[href$="droits.html"],
-article > section a[href$="prevention.html"] {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 7px;
-    padding: 11px 19px;
-    border: 1px solid var(--violet);
-    border-radius: 999px;
-    background: transparent;
-    color: var(--violet);
+#menu-rubriques details {
+    background-color: #FFFFFF;
+    border: 1px solid #CDBBDD;
+    border-left: 5px solid #B66B91;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    padding: 18px 25px;
+    box-shadow: 0 5px 15px rgba(55, 25, 82, 0.07);
+}
+
+/* TITRES DES RUBRIQUES */
+
+#menu-rubriques summary {
+    color: #28134A;
+    font-size: 22px;
+    cursor: pointer;
+    padding: 5px;
     font-weight: bold;
+}
+
+/* CONTENU DES RUBRIQUES */
+
+#menu-rubriques ul {
+    margin-top: 20px;
+    padding-left: 25px;
+}
+
+#menu-rubriques li {
+    margin-bottom: 12px;
+}
+
+#menu-rubriques a {
+    color: #2D00AD;
     text-decoration: none;
+    font-size: 17px;
 }
 
-article > section a[href$="associations.html"]:hover,
-article > section a[href$="droits.html"]:hover,
-article > section a[href$="prevention.html"]:hover {
-    background: var(--violet);
-    color: var(--blanc);
+#menu-rubriques a:hover {
+    color: #B66B91;
+    text-decoration: underline;
 }
 
-/* Informations d'urgence : visibilitÃ© sans effet alarmiste */
-#aide h4 {
-    color: #8C496F;
+/* RUBRIQUE OUVERTE */
+
+#menu-rubriques details[open] {
+    background-color: #F5E7ED;
 }
 
-#aide a[href^="tel:"] {
-    font-weight: bold;
-    text-decoration-thickness: 2px;
+#menu-rubriques summary:hover {
+    color: #B66B91;
 }
 
-/* Listes */
-article ul {
-    padding-left: 22px;
+/* TELEPHONES */
+
+@media (max-width: 700px) {
+
+    #menu-rubriques {
+        width: 95%;
+    }
+
+    #menu-rubriques details {
+        padding: 15px;
+    }
+
+    #menu-rubriques summary {
+        font-size: 18px;
+    }
 }
 
-article li {
-    margin-bottom: 11px;
-    padding-left: 5px;
+/* LIENS */
+
+a {
+    color: var(--violet);
+    text-decoration: underline;
 }
 
-article li::marker {
+a:hover {
     color: var(--rose-accent);
 }
 
-/* Pied de page */
-body > footer {
-    padding: 42px 22px;
-    background: var(--violet-encre);
-    color: #F8F1FA;
+/* LISTES */
+
+article ul {
+    padding-left: 25px;
+}
+
+article li {
+    margin-bottom: 10px;
+}
+
+/* RUBRIQUE CONTACT */
+
+#contact {
+    background-color: var(--lilas);
+    padding: 35px;
+    border-radius: 20px;
+    margin-top: 35px;
+}
+
+/* PIED DE PAGE ET MENTIONS LEGALES */
+
+#pied-de-page {
+    background-color: var(--violet-encre);
+    color: var(--blanc);
+    padding: 40px 20px;
     text-align: center;
 }
 
-body > footer p {
-    margin: 5px 0;
+#pied-de-page a {
+    color: var(--lilas);
 }
 
-body > footer a {
-    color: #E7D5EF;
-}
-
-body > footer a:hover {
+#pied-de-page a:hover {
     color: var(--blanc);
 }
 
-/* Responsive */
+/* ADAPTATION AUX TELEPHONES */
+
 @media (max-width: 700px) {
+
     body {
         font-size: 16px;
     }
 
-    body > header {
-        padding: 58px 20px 42px;
-    }
-
     h1 {
-        letter-spacing: -1px;
+        font-size: 36px;
     }
 
-    body > header nav {
-        margin-top: 30px;
+    h2 {
+        font-size: 30px;
     }
 
-    nav ul {
-        gap: 6px;
-    }
-
-    nav a {
-        padding: 8px 11px;
-        font-size: .88rem;
+    body > header {
+        padding: 45px 20px;
     }
 
     main {
-        width: calc(100% - 28px);
-        margin: 46px auto 58px;
-    }
-
-    article > header {
-        margin-bottom: 38px;
-        padding: 0 6px 30px;
+        width: 92%;
+        margin: 40px auto;
     }
 
     article > section {
-        margin-bottom: 17px;
-        padding: 28px 23px 28px 27px;
-        border-radius: 17px;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
+        padding: 25px;
     }
 
-    *,
-    *::before,
-    *::after {
-        transition-duration: .01ms !important;
+    nav ul {
+        gap: 7px;
+    }
+
+    nav a {
+        padding: 8px 12px;
+        font-size: 14px;
     }
 }

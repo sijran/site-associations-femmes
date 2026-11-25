@@ -322,3 +322,123 @@ article li {
 #urgence h3 {
     color: var(--rose-accent);
 }
+
+/* ====================================== */
+/* EN-TÊTE DU SITE : LOGO ET NAVIGATION */
+/* ====================================== */
+
+.entete-site {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 4%;
+    background-color: var(--ivoire);
+    position: relative;
+    z-index: 100;
+    gap: 25px;
+}
+
+/* Style du nom du site */
+.logo-site h1 {
+    color: var(--violet-encre);
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Style du slogan sous le nom */
+.logo-site p {
+    color: var(--violet);
+    margin: 5px 0 0;
+    font-size: 13px;
+}
+
+/* ====================================== */
+/* MENU PRINCIPAL DE NAVIGATION */
+/* ====================================== */
+
+.navigation-principale {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Positionnement de chaque rubrique */
+.menu-deroulant {
+    position: relative;
+}
+
+/* Apparence du titre des rubriques */
+.menu-deroulant summary {
+    list-style: none;
+    cursor: pointer;
+    color: var(--violet-encre);
+    font-size: 16px;
+    padding: 12px 0;
+}
+
+/* Suppression du marqueur par défaut */
+.menu-deroulant summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Petite flèche à côté du titre */
+.menu-deroulant summary::after {
+    content: "⌄";
+    margin-left: 8px;
+}
+
+/* Changement de flèche lorsque le menu est ouvert */
+.menu-deroulant[open] summary::after {
+    content: "⌃";
+}
+
+/* ====================================== */
+/* SOUS-MENUS DÉROULANTS */
+/* ====================================== */
+
+.menu-deroulant ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
+    background-color: var(--blanc);
+    list-style: none;
+    padding: 12px 0;
+    margin: 0;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+    z-index: 200;
+}
+
+/* Apparence des liens dans les sous-menus */
+.menu-deroulant ul li a {
+    display: block;
+    padding: 15px 22px;
+    color: var(--violet-encre);
+    text-decoration: none;
+}
+
+/* Couleur au survol des liens */
+.menu-deroulant ul li a:hover {
+    background-color: var(--rose-poudre);
+    color: var(--violet);
+}
+
+/* ====================================== */
+/* ADAPTATION AUX TÉLÉPHONES ET TABLETTES */
+/* ====================================== */
+
+@media screen and (max-width: 850px) {
+
+    /* Affichage vertical de l'en-tête */
+    .entete-site {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Les rubriques peuvent passer à la ligne */
+    .navigation-principale {
+        flex-wrap: wrap;
+        gap: 12px 20px;
+    }
+}

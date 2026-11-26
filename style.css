@@ -386,18 +386,30 @@ article li {
         padding: 20px;
     }
     
-/* Footer : pleine largeur sur toutes les pages */
+
+/* 17. FOOTER : pleine largeur et texte centré */
+
 #pied-de-page {
     display: block;
     width: 100%;
     max-width: none;
     margin: 0;
-    box-sizing: border-box;
+    padding: 40px 20px;
     background-color: var(--violet-encre);
     color: var(--blanc);
-    padding: 40px 20px;
     text-align: center;
 }
+
+#pied-de-page p {
+    text-align: center !important;
+    margin: 0 0 12px;
+}
+
+#pied-de-page a {
+    color: var(--lilas);
+    text-align: center;
+}
+    
 /* Centrage du texte dans le footer */
 #pied-de-page {
     width: 100%;

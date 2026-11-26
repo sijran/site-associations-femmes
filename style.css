@@ -314,12 +314,12 @@ article li {
     color: var(--blanc);
 }
 
+
 /* 15. ADAPTATION AUX TABLETTES ET TÉLÉPHONES */
 
 @media (max-width: 850px) {
 
     /* En-tête */
-
     body > header.entete-site {
         padding: 40px 20px;
     }
@@ -329,7 +329,6 @@ article li {
     }
 
     /* Navigation */
-
     nav.navigation-principale {
         flex-wrap: wrap;
         justify-content: center;
@@ -337,8 +336,11 @@ article li {
         padding: 12px;
     }
 
-    /* Contenu */
+    .menu-deroulant summary {
+        font-size: 15px;
+    }
 
+    /* Contenu */
     main {
         width: 92%;
         margin: 40px auto;
@@ -347,11 +349,67 @@ article li {
     article > section {
         padding: 25px;
     }
+}
+
+/* 16. ADAPTATION AUX PETITS TÉLÉPHONES */
+
+@media (max-width: 500px) {
+
+    body {
+        font-size: 16px;
     }
 
-    .menu-deroulant summary {
-        font-size: 15px;
+    .entete-site h1 {
+        font-size: 32px;
     }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    nav.navigation-principale {
+        justify-content: center;
+        gap: 8px 18px;
+    }
+
+    .menu-deroulant ul {
+        min-width: 200px;
+    }
+
+    article > section {
+        padding: 20px;
+    }
+}
+
+/* 17. PIED DE PAGE COMMUN À TOUTES LES PAGES */
+
+body > footer#pied-de-page {
+    display: block;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 40px 20px;
+    background-color: var(--violet-encre);
+    color: var(--blanc);
+    text-align: center;
+}
+
+body > footer#pied-de-page p {
+    text-align: center;
+    margin: 0 0 12px;
+}
+
+body > footer#pied-de-page a {
+    color: var(--lilas);
+    text-align: center;
+}
+
+body > footer#pied-de-page a:hover {
+    color: var(--blanc);
 }
 
 /* 16. ADAPTATION AUX PETITS TÉLÉPHONES */

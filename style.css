@@ -351,6 +351,80 @@ article li {
     }
 }
 
+
+/* 18. MISE EN FORME DES PAGES DE CONTENU */
+
+/* Paragraphes justifiés dans le contenu principal */
+main article p {
+    text-align: justify;
+}
+
+/* Sections avec bordure latérale rose */
+main article > section {
+    background-color: var(--blanc);
+    margin-bottom: 25px;
+    padding: 35px;
+    border: 1px solid var(--lilas-moyen);
+    border-left: 5px solid var(--rose-accent);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(55, 25, 82, 0.07);
+}
+
+/* Alternance des couleurs */
+main article > section:nth-of-type(even) {
+    background-color: var(--rose-poudre);
+}
+
+/* Adaptation aux petits écrans */
+@media (max-width: 850px) {
+    main article > section {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    main article > section {
+        padding: 20px;
+    }
+}
+
+
+/* MISE EN FORME DES PAGES DE CONTENU */
+
+/* Paragraphes justifiés dans le contenu principal */
+main article p {
+    text-align: justify;
+}
+
+/* Sections avec bordure latérale rose */
+main article > section {
+    background-color: var(--blanc);
+    margin-bottom: 25px;
+    padding: 35px;
+    border: 1px solid var(--lilas-moyen);
+    border-left: 5px solid var(--rose-accent);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(55, 25, 82, 0.07);
+}
+
+/* Alternance des couleurs */
+main article > section:nth-of-type(even) {
+    background-color: var(--rose-poudre);
+}
+
+/* Adaptation aux petits écrans */
+@media (max-width: 850px) {
+    main article > section {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 500px) {
+    main article > section {
+        padding: 20px;
+    }
+}
+
 /* 16. ADAPTATION AUX PETITS TÉLÉPHONES */
 
 @media (max-width: 500px) {

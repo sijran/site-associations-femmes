@@ -12,7 +12,42 @@
       <!-- Lien vers la feuille de style CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+    
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
+    const menus = document.querySelectorAll(".menu-deroulant");
+
+    menus.forEach(function (menu) {
+
+        // Ouverture au passage de la souris
+        menu.addEventListener("mouseenter", function () {
+            menus.forEach(function (autreMenu) {
+                autreMenu.open = (autreMenu === menu);
+            });
+        });
+
+        // Fermeture lorsque la souris quitte la rubrique
+        menu.addEventListener("mouseleave", function () {
+            menu.open = false;
+        });
+
+        // Fermeture des autres menus lorsqu'un menu est ouvert
+        menu.addEventListener("toggle", function () {
+            if (menu.open) {
+                menus.forEach(function (autreMenu) {
+                    if (autreMenu !== menu) {
+                        autreMenu.open = false;
+                    }
+                });
+            }
+        });
+
+    });
+
+});
+</script>
+    
 <body>
 
     <!-- EN-TÊTE COMMUN : présent sur toutes les pages -->

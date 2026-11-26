@@ -410,18 +410,19 @@ article li {
     text-align: center;
 }
     
-/* Centrage du texte dans le footer */
-#pied-de-page {
+/* FOOTER : centrage du contenu */
+
+body > footer#pied-de-page {
     width: 100%;
-    text-align: center;
+    text-align: center !important;
 }
 
-#pied-de-page p {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+body > footer#pied-de-page p {
+    text-align: center !important;
+    margin: 0 0 12px;
 }
 
-#pied-de-page a {
+body > footer#pied-de-page a {
+    display: inline-block;
     text-align: center;
 }

@@ -274,10 +274,8 @@ article > header {
 }
 
 
-VIDÉO YOUTUBE RESPONSIVE
-   Adaptation de la vidéo aux écrans d'ordinateur,
-   de tablette et de téléphone
-
+/* VIDÉO YOUTUBE RESPONSIVE Adaptation de la vidéo aux écrans d'ordinateur, de tablette et de téléphone */
+   
 .video-container {
     position: relative;
     width: 100%;

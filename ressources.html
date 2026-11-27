@@ -47,73 +47,54 @@ document.addEventListener("DOMContentLoaded", function () {
 
 <body>
 
-    <!-- EN-TÊTE COMMUN : présent sur toutes les pages -->
+           <!-- EN-TÊTE : TITRE ET TEXTE  -->
 
     <header class="entete-site">
 
-        <!-- Titre principal du site -->
+    <div class="presentation-site">
         <h1>Femmes et cyberviolences</h1>
-
-        <!-- Sous-titre du site -->
         <p>S'informer, se protéger et trouver de l'aide en Île-de-France.</p>
+    </div>
 
-        <!-- Menu principal de navigation -->
-        <nav class="navigation-principale">
+    <!-- MENU PRINCIPAL -->
+    <nav class="navigation-principale" aria-label="Navigation principale">
 
-            <details class="menu-deroulant">
-                <summary>S'informer</summary>
-                <ul>
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="temoignages.html">Témoignages</a></li>
-                    <li><a href="ressources.html">Ressources</a></li>
-                </ul>
-            </details>
-
-            <details class="menu-deroulant">
-                <summary>Comprendre</summary>
-                <ul>
-                    <li><a href="droits.html">Comprendre ses droits</a></li>
-                    <li><a href="chronologie.html">Chronologie</a></li>
-                </ul>
-            </details>
-
-            <details class="menu-deroulant">
-                <summary>Se protéger</summary>
-                <ul>
-                    <li><a href="prevention.html" aria-current="page">Prévention</a></li>
-                </ul>
-            </details>
-
-            <details class="menu-deroulant">
-                <summary>Trouver de l'aide</summary>
-                <ul>
-                    <li><a href="associations.html">Associations</a></li>
-                    <li><a href="contacts.html">Contact</a></li>
-                </ul>
-            </details>
-
-        </nav>
-
-    </header>
-    
-</head>
-<body>
-    <header>
-        <p><a href="index.html">Femmes et cyberviolences</a></p>
-        <nav aria-label="Navigation principale">
+        <details class="menu-deroulant">
+            <summary>Trouver de l'aide</summary>
             <ul>
-                <li><a href="index.html">Accueil</a></li>
                 <li><a href="associations.html">Associations</a></li>
-                <li><a href="droits.html">Comprendre ses droits</a></li>
-                <li><a href="prevention.html">Prévention</a></li>
-                <li><a href="temoignages.html">Témoignages</a></li>
-                <li><a href="chronologie.html">Chronologie</a></li>
-                <li><a href="ressources.html" aria-current="page">Ressources</a></li>
-                <li><a href="contacts.html">Contact</a></li>
+                <li><a href="ressources.html">Ressources</a></li>
             </ul>
-        </nav>
-    </header>
+        </details>
 
+        <details class="menu-deroulant">
+            <summary>Comprendre ses droits</summary>
+            <ul>
+                <li><a href="droits.html">Comprendre ses droits</a></li>
+                <li><a href="chronologie.html">Chronologie</a></li>
+            </ul>
+        </details>
+
+        <details class="menu-deroulant">
+            <summary>Se protéger et prévenir</summary>
+            <ul>
+                <li><a href="prevention.html">Prévention</a></li>
+                <li><a href="protegersescomptes.html">Protéger ses comptes</a></li>
+            </ul>
+        </details>
+
+        <details class="menu-deroulant">
+            <summary>Faire face aux violences</summary>
+            <ul>
+                <li><a href="victimedeviolence.html">Victime de violences</a></li>
+                <li><a href="demarchespoursignaler.html">Signaler les violences</a></li>
+                <li><a href="violenceenligne.html">Violences en ligne</a></li>
+            </ul>
+        </details>
+         </nav>
+
+</header>
+    
     <main>
         <article>
             <header>

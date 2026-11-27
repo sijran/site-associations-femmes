@@ -235,30 +235,42 @@ article > header {
     margin-bottom: 50px;
 }
 
+
 /* BOUTON RETOUR À L'ACCUEIL */
 
-.bouton-accueil {
-    display: flex;
+.bouton-accueil,
+.bouton-accueil:visited {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    font-size: 23px;
-    text-decoration: none;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
 
-    width: 42px;
-    height: 42px;
+    color: var(--violet-encre);
+    background-color: var(--rose-poudre);
 
     border-radius: 50%;
-    background-color: var(--rose-poudre);
+    text-decoration: none;
 
     transition: all 0.3s ease;
 }
 
-/* Effet au survol */
+/* LOGO MAISON */
+
+.bouton-accueil svg {
+    display: block;
+    width: 21px;
+    height: 21px;
+}
+
+/* EFFET AU SURVOL */
 
 .bouton-accueil:hover {
+    color: var(--blanc);
     background-color: var(--rose-accent);
-    transform: scale(1.1);
+    transform: scale(1.08);
 }
 
 /* 9. SECTIONS DU SITE */

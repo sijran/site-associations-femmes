@@ -317,6 +317,78 @@ article > section:nth-of-type(even) {
     background-color: var(--rose-poudre);
 }
 
+/* =========================================
+   PRÉSENTATION COMMUNE DES PAGES DE CONTENU
+   Sans encadrés autour des sections
+========================================= */
+
+/* Sections sans fond, bordure ni ombre */
+
+main.pages-contenu article > section {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    margin-bottom: 35px;
+}
+
+/* Suppression de l'alternance des couleurs */
+
+main.pages-contenu article > section:nth-of-type(even) {
+    background: transparent;
+}
+
+/* Paragraphes sans encadrés */
+
+main.pages-contenu article p {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 15px 0;
+    text-align: justify;
+}
+
+/* Listes sans encadrés */
+
+main.pages-contenu article ul,
+main.pages-contenu article ol {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding-left: 30px;
+}
+
+/* Introduction sans encadré */
+
+main.pages-contenu .introduction-page {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* Rubrique urgence sans encadré */
+
+main.pages-contenu #urgence {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
+/* Rubrique contact sans encadré */
+
+main.pages-contenu #contact {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+}
+
 /* 10. INFORMATIONS IMPORTANTES ET URGENCE */
 
 #urgence {

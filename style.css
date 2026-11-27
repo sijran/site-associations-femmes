@@ -273,6 +273,34 @@ article > header {
     transform: scale(1.08);
 }
 
+
+VIDÉO YOUTUBE RESPONSIVE
+   Adaptation de la vidéo aux écrans d'ordinateur,
+   de tablette et de téléphone
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin: 30px auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Le lecteur vidéo occupe toute la zone prévue */
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 12px;
+}
+
 /* 9. SECTIONS DU SITE */
 
 article > section {

@@ -235,6 +235,32 @@ article > header {
     margin-bottom: 50px;
 }
 
+/* BOUTON RETOUR À L'ACCUEIL */
+
+.bouton-accueil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+    text-decoration: none;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+    background-color: var(--rose-poudre);
+
+    transition: all 0.3s ease;
+}
+
+/* Effet au survol */
+
+.bouton-accueil:hover {
+    background-color: var(--rose-accent);
+    transform: scale(1.1);
+}
+
 /* 9. SECTIONS DU SITE */
 
 article > section {
